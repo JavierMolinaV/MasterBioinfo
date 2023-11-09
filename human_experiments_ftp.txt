@@ -1,0 +1,2 @@
+https://ftp.pride.ebi.ac.uk/pride/data/archive/2023/09/PXD045237/B10127_Bp_WNE19_trap10_PRC-5493_LennartMartens_shotgun-24.mgf
+https://ftp.pride.ebi.ac.uk/pride/data/archive/2023/09/PXD045237/B09925_Bp_WNE17_trap10_PRC-5493_LennartMartens_shotgun-12.mgf
