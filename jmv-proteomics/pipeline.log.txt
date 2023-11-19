@@ -1,0 +1,97 @@
+INFO: CPU: javier-VirtualBox
+INFO: Crux version: 4.1-e4b2f4d-2021-10-13
+INFO: dom 19 nov 2023 17:46:54 CET
+COMMAND LINE: crux pipeline --search-engine comet --post-processor percolator --decoy_search 1 --overwrite T MasterBioinfo/jmv-proteomics/Data/Human-MS/B09925_Bp_WNE17_trap10_PRC-5493_LennartMartens_shotgun-12.mgf MasterBioinfo/jmv-proteomics/Resources/proteome/human.fasta
+INFO: Beginning pipeline.
+INFO: Running pipeline with the following steps:
+INFO: --> comet
+INFO: --> percolator
+INFO: Running comet...
+INFO: Search will be run with the following files against database 'MasterBioinfo/jmv-proteomics/Resources/proteome/human.fasta':
+INFO: --> MasterBioinfo/jmv-proteomics/Data/Human-MS/B09925_Bp_WNE17_trap10_PRC-5493_LennartMartens_shotgun-12.mgf
+INFO:  Comet version "2019.01 rev. 5"
+INFO: 
+INFO:  Search start:  11/19/2023, 05:46:54 PM
+INFO:  - Input file: MasterBioinfo/jmv-proteomics/Data/Human-MS/B09925_Bp_WNE17_trap10_PRC-5493_LennartMartens_shotgun-12.mgf
+INFO:    - Load spectra: 62978
+INFO:      - Search progress:   2%  4%  7%  9% 12% 14% 16% 19% 21% 24% 26% 29% 31% 34% 36% 38% 41% 43% 46% 48% 50% 53% 55% 58% 60% 63% 65% 67% 70% 72% 75% 77% 80% 82% 85% 87% 89% 92% 94% 97% 99%100%
+INFO:      - Post analysis:  done
+INFO:  Search end:    11/19/2023, 05:51:21 PM, 4m:27s
+INFO: 
+INFO: Running percolator...
+INFO: Post-processing will be run using the following files:
+INFO: --> crux-output/comet.target.txt
+INFO: Running make-pin
+INFO: Parsing crux-output/comet.target.txt
+INFO: Assigning index 0 to crux-output/comet.target.txt.
+INFO: There are 176754 target matches and 138136 decoys
+INFO: Maximum observed charge is 6.
+INFO: Finished make-pin.
+INFO: Percolator version 3.05.nightly-137-e806a0c, Build Date Oct 14 2021 11:03:16
+INFO: Copyright (c) 2006-9 University of Washington. All rights reserved.
+INFO: Written by Lukas Käll (lukall@u.washington.edu) in the
+INFO: Department of Genome Sciences at the University of Washington.
+INFO: Issued command:
+INFO: percolator --results-peptides crux-output/percolator.target.peptides.txt --decoy-results-peptides crux-output/percolator.decoy.peptides.txt --results-psms crux-output/percolator.target.psms.txt --decoy-results-psms crux-output/percolator.decoy.psms.txt --verbose 2 --protein-decoy-pattern decoy_ --seed 1 --subset-max-train 0 --trainFDR 0.01 --testFDR 0.01 --maxiter 10 --search-input auto --no-schema-validation --protein-enzyme trypsin --post-processing-tdc crux-output/make-pin.pin
+INFO: Started Sun Nov 19 17:51:35 2023
+INFO: Hyperparameters: selectionFdr=0.01, Cpos=0, Cneg=0, maxNiter=10
+INFO: Reading tab-delimited input from datafile crux-output/make-pin.pin
+INFO: Features:
+INFO: lnrSp deltCn XCorr Sp IonFrac PepLen Charge1 Charge2 Charge3 Charge4 Charge5 Charge6 enzN enzC enzInt lnNumSP dM absdM 
+INFO: Found 314890 PSMs
+INFO: Separate target and decoy search inputs detected, using target-decoy competition on Percolator scores.
+INFO: Train/test set contains 176754 positives and 138136 negatives, size ratio=1.27957 and pi0=1
+INFO: Selecting Cpos by cross-validation.
+INFO: Selecting Cneg by cross-validation.
+INFO: Split 1:	Selected feature 3 as initial direction. Could separate 9706 training set positives with q<0.01 in that direction.
+INFO: Split 2:	Selected feature 3 as initial direction. Could separate 9674 training set positives with q<0.01 in that direction.
+INFO: Split 3:	Selected feature 3 as initial direction. Could separate 9882 training set positives with q<0.01 in that direction.
+INFO: Found 14637 test set positives with q<0.01 in initial direction
+INFO: Reading in data and feature calculation took 8.5585 cpu seconds or 5 seconds wall clock time.
+INFO: ---Training with Cpos selected by cross validation, Cneg selected by cross validation, initial_fdr=0.01, fdr=0.01
+INFO: Iteration 1:	Estimated 22787 PSMs with q<0.01
+INFO: Iteration 2:	Estimated 26678 PSMs with q<0.01
+INFO: Iteration 3:	Estimated 27777 PSMs with q<0.01
+INFO: Iteration 4:	Estimated 28248 PSMs with q<0.01
+INFO: Iteration 5:	Estimated 28431 PSMs with q<0.01
+INFO: Iteration 6:	Estimated 28581 PSMs with q<0.01
+INFO: Iteration 7:	Estimated 28719 PSMs with q<0.01
+INFO: Iteration 8:	Estimated 28831 PSMs with q<0.01
+INFO: Iteration 9:	Estimated 28906 PSMs with q<0.01
+INFO: Iteration 10:	Estimated 28937 PSMs with q<0.01
+INFO: Learned normalized SVM weights for the 3 cross-validation splits:
+INFO:  Split1	 Split2	 Split3	FeatureName
+INFO: -1.2454	-1.4611	-1.2846	lnrSp
+INFO: -0.4856	-0.5034	-0.4520	deltCn
+INFO:  2.2700	 2.4252	 2.2376	XCorr
+INFO: -0.2556	-0.3477	-0.3035	Sp
+INFO: -0.9275	-0.8693	-0.8507	IonFrac
+INFO: -1.4342	-1.1100	-1.0647	PepLen
+INFO:  0.0000	 0.0000	 0.0000	Charge1
+INFO:  0.4467	 0.4941	 0.4081	Charge2
+INFO: -0.2376	-0.2956	-0.2210	Charge3
+INFO: -0.3415	-0.3140	-0.3218	Charge4
+INFO: -0.1620	-0.1875	-0.1128	Charge5
+INFO: -0.0104	-0.0285	 0.0252	Charge6
+INFO:  0.4239	 0.3032	 0.3829	enzN
+INFO:  0.0000	 0.0000	 0.0000	enzC
+INFO: -0.5761	-0.6215	-0.5184	enzInt
+INFO: -0.9046	-0.7174	-0.5245	lnNumSP
+INFO: -0.1799	 0.1407	-0.1522	dM
+INFO: -7.9320	-9.4826	-8.9074	absdM
+INFO: -10.2870	-11.9040	-11.1909	m0
+INFO: Found 28788 test set PSMs with q<0.01.
+INFO: Selected best-scoring PSM per scan+expMass (target-decoy competition): 48979 target PSMs and 13999 decoy PSMs.
+INFO: Multiple instantiations of Normalizer
+INFO: Multiple instantiations of Normalizer
+INFO: Multiple instantiations of Normalizer
+INFO: Tossing out "redundant" PSMs keeping only the best scoring PSM for each unique peptide.
+INFO: Calculating q values.
+INFO: Final list yields 5806 target peptides with q<0.01.
+INFO: Calculating posterior error probabilities (PEPs).
+INFO: Processing took 136.8662 cpu seconds or 54 seconds wall clock time.
+INFO: Multiple instantiations of Normalizer
+INFO: Multiple instantiations of Normalizer
+INFO: Elapsed time: 341 s
+INFO: Finished crux pipeline.
+INFO: Return Code:0
